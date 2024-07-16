@@ -1,0 +1,14 @@
+"Put here the classes you want to mutate"
+classesToMutate := { AlgoRastreadorZ . Rastreo . CriterioFuerte . CriterioDebil . ModeloNuevo . ModeloViejo . Base .KaioKen . MonoGigante . Criterio . Transformacion . Modelo . CriterioNoValidoException . KiNoValidoException . ModeloNoValidoException . PeleadorNoRegistradoException . TransformacionNoValidaException . }.
+"Put here the test classes associated with"
+testClasses :=  { AlgoRastreadorZTest . AlgoRastreadorZTestPropios 
+ }.
+
+analysis := MTAnalysis new
+    classesToMutate: classesToMutate;
+    testClasses: testClasses.
+
+analysis run.
+
+"To inspect the results"
+analysis generalResult inspect.
